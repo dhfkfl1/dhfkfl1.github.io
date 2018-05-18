@@ -130,7 +130,7 @@ void startConfirmCredentialIntent(Intent intent, Bundle optionsBundle) {
 }
 ~~~
 
----
+~~~
 private void updateTaskReturnToType(
         TaskRecord task, int launchFlags, ActivityStack focusedStack) {
     if ((launchFlags & (FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_TASK_ON_HOME))
@@ -152,4 +152,4 @@ private void updateTaskReturnToType(
     // Else we are coming from an application stack so return to an application.
     task.setTaskToReturnTo(APPLICATION_ACTIVITY_TYPE);
 }
----
+~~~
