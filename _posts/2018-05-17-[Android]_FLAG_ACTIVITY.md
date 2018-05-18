@@ -13,9 +13,9 @@ date:   2018-05-17 15:55:25 +0900
 <br>
 
 <h3>FLAG_ACTIVITY_NO_HISTORY</h3>
-액티비티에 FLAG_ACTIVITY_NO_HISTORY 플래그를 사용할 경우, 해당 액티비티는 태스크에 쌓이지 않는다.<br>
+액티비티에 FLAG_ACTIVITY_NO_HISTORY 플래그를 설정할 경우, 해당 액티비티는 태스크에 쌓이지 않는다.<br>
 예를 들어, A->B->C 순으로 액티비티를 실행하여 태크스에 A, B, C가 존재한다고 가정해보자.<br>
-이후, B 액티비티에 FLAG_ACTIVITY_NO_HISTORY 플래그를 설정하고 같은 순서로 실행하면 태스크엔 A와 B만이 존재하게 된다.<br>
+이후, B 액티비티에 FLAG_ACTIVITY_NO_HISTORY 플래그를 설정하고 같은 순서로 실행하면 태스크엔 A와 C만이 존재하게 된다.<br>
 이 플래그는 ActivityRecord.java의 isNoHistory()에서 찾아볼 수 있었다.<br>
 ~~~
 boolean isNoHistory() {
@@ -23,4 +23,24 @@ boolean isNoHistory() {
             || (info.flags & FLAG_NO_HISTORY) != 0;
 }
 ~~~
-<h3></h3>
+<h3>FLAG_ACTIVITY_CLEAR_TASK</h3>
+액티비티에 FLAG_ACTIVITY_CLEAR_TASK 플래그를 설정할 경우, 해당 플래그로 액티비티를 실행하면 태스크 내의 모든 액티비티가 제거되고 실행되는 액티비티만 남는다.<br>
+예를 들어, A에서 B를 실행하고 B에선 C를 실행해 태스크엔 A, B, C가 존재한다고 가정해보자.<br>
+이후, B에서 C를 실행할때 FLAG_ACTIVITY_CLEAR_TASK 플래그를 설정하고 같은 순서로 실행해 보자.<br>
+A가 루트 액티비티로 태스크에 존재하고, 이후 B가 쌓인다.<br>
+B에서 C를 실행할 때, 설정된 플래그에 의해 태스크에 존재하던 A와 B가 사라지고 태스크엔 C만 존재하게 된다.<br>
+이 플래그는 ActivityStarter.java 내에서 찾아볼 수 있었다.<br>
+clearedTask(), setTaskFromIntentActivity(), startActivityUnchecked(), setTargetStackAndMoveToFrontIfNeeded() 등의 메소드에서 사용됨
+~~~
+boolean clearedTask = (mLaunchFlags & (FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TASK))
+        == (FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TASK) && (mReuseTask != null);
+if (startedActivityStackId == PINNED_STACK_ID && (result == START_TASK_TO_FRONT
+        || result == START_DELIVERED_TO_TOP || clearedTask)) {
+    // The activity was already running in the pinned stack so it wasn't started, but either
+    // brought to the front or the new intent was delivered to it since it was already in
+    // front. Notify anyone interested in this piece of information.
+    mService.mTaskChangeNotificationController.notifyPinnedActivityRestartAttempt(
+            clearedTask);
+    return;
+}
+~~~
