@@ -1,6 +1,7 @@
 ---
 layout: post
 title: <180510> "이것이 안드로이드다"를 읽고..
+categories: jeky update
 ---
 
 <h3>태스크는 무엇일까?</h3><br>

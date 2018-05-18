@@ -1,6 +1,7 @@
 ---
 layout: post
 title: <180503> Activity Start study
+categories: jeky update
 ---
 
 <h3>ActivityStart는 어떤 작업을 하는 클래스일까?</h3>

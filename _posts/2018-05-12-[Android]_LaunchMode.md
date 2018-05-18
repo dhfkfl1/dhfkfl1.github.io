@@ -1,6 +1,7 @@
 ---
 layout: post
 title: <180512> Activity에서 LaunchMode란?
+categories: jeky update
 ---
 
 <h3>액티비티의 LaunchMode(실행모드)</h3>
