@@ -1,6 +1,7 @@
 ---
 layout: post
 title: <180512> Activity에서 LaunchMode란?
+date:   2018-05-12 17:55:25 +0900
 categories: jeky update
 ---
 

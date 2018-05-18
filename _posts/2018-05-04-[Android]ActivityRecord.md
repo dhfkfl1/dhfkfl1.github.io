@@ -1,6 +1,7 @@
 ---
 layout: post
 title: <180504> Activity Record study
+date:   2018-05-04 17:55:25 +0900
 categories: jeky update
 ---
 <h3>ActivityRecord.java내에서 ActivityRecord의 형태는?</h3>

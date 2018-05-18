@@ -1,6 +1,7 @@
 ---
 layout: post
 title: <180510> "이것이 안드로이드다"를 읽고..
+date:   2018-05-10 17:55:25 +0900
 categories: jeky update
 ---
 
