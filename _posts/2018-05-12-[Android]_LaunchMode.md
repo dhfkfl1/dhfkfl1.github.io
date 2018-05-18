@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Activity에서 LaunchMode란?"
+title: "[180512] Activity에서 LaunchMode란?"
 date:   2018-05-12 15:55:25 +0900
 ---
 
