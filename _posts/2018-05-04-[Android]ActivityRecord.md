@@ -1,6 +1,6 @@
 ---
 layout: post
-title: <180504> Activity Record study
+title: "<180504> Activity Record study"
 date:   2018-05-04 17:55:25 +0900
 categories: jeky update
 ---
