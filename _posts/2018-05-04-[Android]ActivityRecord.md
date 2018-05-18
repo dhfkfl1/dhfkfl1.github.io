@@ -2,7 +2,7 @@
 layout: post
 title: "<180504> Activity Record study"
 date:   2018-05-04 17:55:25 +0900
-categories: jeky update
+categories: jekyll update
 ---
 <h3>ActivityRecord.java내에서 ActivityRecord의 형태는?</h3>
 <p>지난 포스트에선 TaskRecord에 대한 부분을 간략하게 살펴보았다. <br>

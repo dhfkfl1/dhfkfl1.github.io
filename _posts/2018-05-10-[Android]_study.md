@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "<180510> "이것이 안드로이드다"를 읽고.."
-date:   2018-05-10 17:55:25 +0900
-categories: jeky update
+title: "'이것이 안드로이드다'를 읽고.."
+date:   2018-05-10 15:55:25 +0900
+categories: jekyll update
 ---
 
 <h3>태스크는 무엇일까?</h3><br>

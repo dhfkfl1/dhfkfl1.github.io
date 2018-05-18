@@ -2,7 +2,7 @@
 layout: post
 title: "<180503> Activity Start study"
 date:   2018-05-03 17:55:25 +0900
-categories: jeky update
+categories: jekyll update
 ---
 
 <h3>ActivityStart는 어떤 작업을 하는 클래스일까?</h3>
