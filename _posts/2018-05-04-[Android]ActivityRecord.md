@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "<180504> Activity Record study"
+title: "Activity Record study"
 date:   2018-05-04 15:55:25 +0900
 ---
 <h3>ActivityRecord.java내에서 ActivityRecord의 형태는?</h3>
