@@ -4,7 +4,7 @@ title: "[180504] Activity Record study"
 date:   2018-05-04 15:55:25 +0900
 ---
 <h3>ActivityRecord.java내에서 ActivityRecord의 형태는?</h3>
-<p>지난 포스트에선 TaskRecord에 대한 부분을 간략하게 살펴보았다. <br>
+<p>지난 포스팅에선 TaskRecord에 대한 부분을 간략하게 살펴보았다. <br>
 오늘은 ActivityRecord의 내용을 살펴볼 것이다.</p>
 
 ~~~
