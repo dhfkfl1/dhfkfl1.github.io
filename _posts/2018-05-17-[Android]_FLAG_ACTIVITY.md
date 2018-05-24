@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[180517] Activity에 쓰이는 FLAG"
+title: "[180517] Activity에 쓰이는 FLAG(1)"
 date:   2018-05-17 15:55:25 +0900
 
 ---
