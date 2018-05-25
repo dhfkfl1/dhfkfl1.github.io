@@ -171,7 +171,7 @@ setInitialState() 메소드에 사용
 <h3>FLAG_ACTIVITY_NO_USER_ACTION</h3>
 FLAG_ACTIVITY_NO_USER_ACTION 플래그는 onUserLeaveHint()가 실행되는 것을 차단하는 역할을 한다.<br>
 onUserLeaveHint() 메소드는 사용자의 액션없이 액티비티가 실행되거나 전환되는 경우 호출되는 메소드이다.<br>
-예를 들어, A 앱을 사용하는 중에 전화가 와서 화면이 전환되는 경우 onUserLeaveHint()가 호출되는데 FLAG_ACTIVITY_NO_USER_ACTION 플래그를 설정하면 onUserLeaveHint()의 호출을 차단한다.
+예를 들어, A 앱을 사용하는 중에 전화가 와서 화면이 전환되는 경우 onUserLeaveHint()가 호출되는데 FLAG_ACTIVITY_NO_USER_ACTION 플래그를 설정하면 onUserLeaveHint()의 호출을 차단한다.<br>
 이 플래그는 ActivityStarter.java에서 찾아볼 수 있었다.<br>
 setInitialState() 메소드에 사용
 
@@ -182,7 +182,7 @@ setInitialState() 메소드에 사용
 <h3>FLAG_ACTIVITY_SINGLE_TOP</h3>
 FLAG_ACTIVITY_SINGLE_TOP 플래그는 이전 포스팅에서의 LaunchMode에서의 singleTop과 같은 역할을 한다.<br>
 예를 들어, 태스크에 A->B->C 액티비티가 적재되어있고, 톱 액티비티인 C에서 다시 C 액티비티를 실행할 경우 A->B->C->C의 액티비티가 태스크에 적재될 것이다.<br>
-그러나, C에서 새로운 C를 실행시킬 때 FLAG_ACTIVITY_SINGLE_TOP 플래그를 설정해 실행할 경우 톱 액티비티의 중복을 막아 A->B->C의 액티비티가 태스크에 남게 된다.
+그러나, C에서 새로운 C를 실행시킬 때 FLAG_ACTIVITY_SINGLE_TOP 플래그를 설정해 실행할 경우 톱 액티비티의 중복을 막아 A->B->C의 액티비티가 태스크에 남게 된다.<br>
 이 플래그는 ActivityStarter.java에서 찾아볼 수 있었다.<br>
 startActivityUnchecked(), setTaskFromIntentActivity(), setTaskFromInTask() 등의 메소드에 사용
 
