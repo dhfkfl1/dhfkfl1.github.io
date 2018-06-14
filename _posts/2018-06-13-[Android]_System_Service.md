@@ -24,7 +24,7 @@ date:   2018-06-13 17:55:25 +0900
 <h3>액티비티가 실행되는 과정</h3><br>
 \*두 개의 앱 a, b가 있고 A 액티비티에서 B 액티비티를 실행한다고 가정<br>
 
-<img src="/assets/images/activitymanager.jpg" width="600" height="400">
+<img src="/assets/images/activitymanager.JPG" width="600" height="400">
 
 1. A 액티비티에서 [B 실행] 버튼을 누른다.<br>
 2. 버튼의 상호작용으로 인텐트가 작성된다. <startActivity(intent)><br>
