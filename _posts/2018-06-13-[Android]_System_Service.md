@@ -24,10 +24,10 @@ date:   2018-06-13 17:55:25 +0900
 <h3>액티비티가 실행되는 과정</h3><br>
 \*  두 개의 앱 a, b가 있고 A 액티비티에서 B 액티비티를 실행한다고 가정<br>
 
-<img src="/assets/images/activitymanager.JPG" width="600" height="400">
+<img src="/assets/images/activitymanager.JPG" width="700" height="500">
 
 1. A 액티비티에서 [B 실행] 버튼을 누른다.<br>
-2. 버튼의 상호작용으로 인텐트가 작성된다. <startActivity(intent)><br>
+2. 버튼의 상호작용으로 인텐트가 작성된다. startActivity(intent)<br>
 3. startActivity 함수를 통해 인텐트를 액티비티 매니저에 전달하여 B 앱 실행 요청을 한다.<br>
 4. 액티비티 매니저는 인텐트에 기록된 정보를 추출하여 패키지 매니저에 전달한다.<br>
 5. 패키지 매니저는 설치된 앱 중 수신받은 정보의 액티비티가 존재하는지 확인한다. 존재한다면, 해당 액티비티 정보를 액티비티 매니저로 전달한다.<br>
