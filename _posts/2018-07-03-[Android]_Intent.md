@@ -21,5 +21,36 @@ date:   2018-07-03 17:55:25 +0900
 ex> 시스템 상태와 관련된 메시지 - 배터리 부족, 언어 변경, 파일 다운로드 완료 등<br>
 
 4. 컨텐트 프로바이더(Content Provider)<br>
-어플리케이션 내의 데이터를 다른 어플리케이션과 공유할 수 있게 하는 컴포넌트
-<br>
+어플리케이션 내의 데이터를 다른 어플리케이션과 공유할 수 있게 하는 컴포넌트<br>
+
+5. 인텐트(Intent)
+안드로이드 어플리케이션을 구성하는 컴포넌트 간의 작업요청 및 데이터를 전달하는 메시지
+
+<h3>인텐트의 생성 주체</h3>
+-안드로이드 시스템<br>
+-안드로이드 프레임워크<br>
+-어플리케이션<br>
+
+<h3>인텐트 전송메소드</h3>
+컴포넌트 별로 별도의 메소드가 존재<br>
+1. 액티비티(Activity)<br>
+-Context.startActivity()<br>
+-Activity.startActivityForResult()<br>
+
+2. 서비스(Service)<br>
+-Context.startService()<br>
+-Context.bindService()<br>
+
+3. 브로드캐스트 리시버(Broadcast Receiver)<br>
+-Context.sendBroadcast()<br>
+-Context.sendOrderedBroadcast()<br>
+-Context.sendStickyBroadcast()<br>
+
+4. 컨텐트 프로바이더(Content Provider)<br>
+위의 1 ~ 3의 컴포넌트들은 Intent 객체를 생성하고 객체 내에 메시지를 담아 전달하는 방식 <br>
+그와 달리, 컨텐트 프로바이더는 ContentResolver 객체를 통해 데이터 전달<br>
+
+<h3>인텐트 객체의 구성요소</h3>
+Intent 객체는 컴포넌트이름 / 액션 / 카테고리 / 데이터 / 데이터 타입 / 엑스트라로 구성됨<br>
+
+1. 컴포넌트 이름
