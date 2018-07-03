@@ -53,6 +53,21 @@ ex> 시스템 상태와 관련된 메시지 - 배터리 부족, 언어 변경, �
 
 <h3>인텐트 객체의 구성요소</h3>
 <br>
-Intent 객체는 컴포넌트이름 / 액션 / 카테고리 / 데이터 / 데이터 타입 / 엑스트라로 구성됨<br>
+Intent 객체는 컴포넌트이름 / 액션 / 카테고리 / 데이터(URI) / 데이터 타입 / 추가정보(extra)로 구성됨<br>
 
-1. 컴포넌트 이름
+1. 컴포넌트 이름<br>
+클래스 이름 또는 manifest 파일에서 설정된 패키지 이름과 클래스 이름의 조합<br>
+- 컴포넌트 이름 설정 : setComponent(), setClass(), setClassName()<br>
+- 컴포넌트 이름 읽기 : getComponent()<br>
+~~~
+Intent intent = new Intent(Intent.ACTION_VIEW);
+intent.setClassName(this, Activity.class.getName());
+startActivity(intent);
+~~~
+
+2. 액션(Action)<br>
+수행되어야 하는 작업 내용으로 액티비티 액션과 브로드캐스트 액션으로 나뉨<br>
+- 액션 설정 : setAction()<br>
+- 액션 읽기 : getAction()<br>
+<br>
+- 액티비티 액션
