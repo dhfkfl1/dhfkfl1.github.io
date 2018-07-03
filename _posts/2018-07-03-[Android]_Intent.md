@@ -70,5 +70,17 @@ startActivity(intent);
 - 액션 읽기 : getAction()<br>
 <br>
 - 액티비티 액션
-  * sdadasd
-  - dfdfasdd
+  ACTION_MAIN : 시작하는 액티비티를 지정
+  ACTION_VIEW : 인텐트에 첨부되는 데이터의 URI가 가르키는 데이터를 사용자에게 표시
+  ACTION_EDIT : 인텐트에 첨부되는 데이터의 URI가 가르키는 데이터를 변경
+  ACTION_DELETE : 인텐트에 첨부되는 데이터의 URI가 가르키는 데이터를 삭제
+  ACTION_DEFAULT : VIEW와 동일한 내용
+  ACTION_PICK : 데이터에서 하나의 URI를 선택하여 정보를 반환
+  ACTION_GET_CONTENT : 데이터에서 하나의 CONTENT를 선택하여 반환
+  ACTION_RUN : 데이터를 실행시키는 액션
+  ACTION_INSERT : 빈 아이템을 작성하라는 액션
+  ACTION_CALL : 전화 연결을 요청하는 액션 (실제로 전달된 전화번호로 전화를 검)
+  ACTION_DIAL : 전화 연결을 요청하는 액션 (전화 다이얼패드 화면으로 이동)
+  ACTION_SENDTO : 데이터의 메시지를 보내라는 액션
+  ACTION_ANSWER : 전화 착신에 관한 액션
+  ACTION_SYNC : 모바일 디바이스의 데이터와 서버의 데이터를 동기화하라는 액션
