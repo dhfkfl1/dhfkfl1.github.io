@@ -70,5 +70,5 @@ startActivity(intent);
 - 액션 읽기 : getAction()<br>
 <br>
 - 액티비티 액션
-  - sdadasd
+  * sdadasd
   - dfdfasdd
