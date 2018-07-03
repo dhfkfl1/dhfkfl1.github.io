@@ -23,7 +23,7 @@ ex> 시스템 상태와 관련된 메시지 - 배터리 부족, 언어 변경, �
 4. 컨텐트 프로바이더(Content Provider)<br>
 어플리케이션 내의 데이터를 다른 어플리케이션과 공유할 수 있게 하는 컴포넌트<br>
 
-5. 인텐트(Intent)
+5. 인텐트(Intent)<br>
 안드로이드 어플리케이션을 구성하는 컴포넌트 간의 작업요청 및 데이터를 전달하는 메시지
 
 <h3>인텐트의 생성 주체</h3>
@@ -35,17 +35,17 @@ ex> 시스템 상태와 관련된 메시지 - 배터리 부족, 언어 변경, �
 <br>
 컴포넌트 별로 별도의 메소드가 존재<br>
 1. 액티비티(Activity)<br>
--Context.startActivity()<br>
--Activity.startActivityForResult()<br>
+- Context.startActivity()<br>
+- Activity.startActivityForResult()<br>
 
 2. 서비스(Service)<br>
--Context.startService()<br>
--Context.bindService()<br>
+- Context.startService()<br>
+- Context.bindService()<br>
 
 3. 브로드캐스트 리시버(Broadcast Receiver)<br>
--Context.sendBroadcast()<br>
--Context.sendOrderedBroadcast()<br>
--Context.sendStickyBroadcast()<br>
+- Context.sendBroadcast()<br>
+- Context.sendOrderedBroadcast()<br>
+- Context.sendStickyBroadcast()<br>
 
 4. 컨텐트 프로바이더(Content Provider)<br>
 위의 1 ~ 3의 컴포넌트들은 Intent 객체를 생성하고 객체 내에 메시지를 담아 전달하는 방식 <br>
