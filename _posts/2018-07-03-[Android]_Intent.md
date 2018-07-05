@@ -84,3 +84,47 @@ startActivity(intent);
   ACTION_SENDTO : 데이터의 메시지를 보내라는 액션<br>
   ACTION_ANSWER : 전화 착신에 관한 액션<br>
   ACTION_SYNC : 모바일 디바이스의 데이터와 서버의 데이터를 동기화하라는 액션<br>
+<br>
+ - 브로드캐스트 액션
+  ACTION_BATTERY_CHANGED : 배터리 잔량의 변화를 알림<br>
+  ACTION_BATTERY_LOW : 배터리 부족 경고<br>
+  ACTION_BOOT_COMPLETED : 시스템 부팅 완료 알림<br>
+  ACTION_DATE_CHANGE : 날짜 변경 알림<br>
+  ACTION_HEADSET_PLUG : 헤드셋이 기기에 연결 또는 분리되었음을 알림<br>
+  ACTION_PACKAGE_ADDED : 어플리케이션 패키지 추가 알림<br>
+  ACTION_PACKAGE_REMOVED : 어플리케이션 패키지 제거 알림<br>
+  ACTION_SCREEN_ON : 스크린이 켜졌음을 알림<br>
+  ACTION_TIMEZONE_CHANGED : 타임존 변경시 알림<br>
+  ACTION_TIME_CHANGED : 시간 지정시 알림<br>
+  ACTION_TIME_TICK : 매 시간 변경시 알림<br>
+<br>
+- 카테고리(Category)<br>
+인텐트를 수신하여야 할 컴포넌트의 종류에 대한 정보를 포함하는 문자열을 정의<br>
+  CATEGORY_BROWSABLE : 타겟 액티비티는 링크에 의해 참조되는 데이터를 보여주기 위해 호출되는 브라우저<br>
+  CATEGORY_HOME : 홈화면을 보여주는 액티비티가 되어야 한다.<br>
+  CATEGORY_LAUNCHER : 액티비티는 하나의 태스크에서 최초로 생성된 액티비티가 되며, 최상위 계층의 어플리케이션을 시작된다.<br>
+<br>
+3. 데이터(URI)<br>
+호출 대상 액티비티가 처리해 주었으면 하는 데이터 주소(실제 데이터 X)<br>
+ex> 액션이 'ACTION_DAIL'인 경우, 데이터 필드는 전화번호를 가진 'tel: URI'을 가져야 한다.<br>
+  - URI 설정 : setData()<br>
+  - URI 읽기 : getData()<br>
+  - MIME 설정 : setType()<br>
+  - MIME 읽기 : getType()<br>
+  - URI와 MIME 동시에 설정 : setDataAndType()<br>
+
+4. 데이터 타입<br>
+인텐트 객체 내의 데이터 필드는 데이터의 '주소'만을 나타낼 뿐, 주소 자체의 해당 URI가 가르키는 데이터의 종류가 어떤 것인지 알 수가 없다.<br>
+때문에, 데이터 타입 필드는 데이터의 '타입'을 지정하여 인텐트 해석 과정에서 정확하게 대상 컴포넌트를 찾을 수 있도록 한다.<br>
+
+5. 추가 정보(Extra)<br>
+인텐트의 엑스트라 필드에 필요한 값을 설정하면 안드로이드는 엑스트라 값을 Bundle 객체로 변환한다.<br>
+Bundle 객체는 인텐트를 사용하여 컴포넌트를 호출할 때 onCreate() 콜백 메서드의 파라미터로 전달된다.<br>
+ex> 액션이 'ACTION_TIMEZONE_CHANGED'인 경우, 새로운 시간대를 나타내는 'time-zone' 엑스트라를 제공해야 한다.<br>
+액션이 'ACTION_HEADSET_PLUG'인 경우, 헤드셋 타입에 대한 'name'과 연결 상태 'state' 엑스트라를 제공해야 한다.<br>
+  - 엑스트라 설정 : putExtra()<br>
+  - 엑스트라 읽기 : get<String, Int, Boolean ...>Extra()<br>
+
+6. 플래그(Flag)<br>
+안드로이드 시스템에게 액티비티를 시작시키는 방법과 시작 이후 액티비티를 다루는 방법을 표시<br>
+ * <a href="https://dhfkfl1.github.io/dhfkfl1.github.io/2018/05/17/Android-_FLAG_ACTIVITY.html">플래그 종류</a>
