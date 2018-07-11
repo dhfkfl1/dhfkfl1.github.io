@@ -18,6 +18,7 @@ setAction(), setCategory()와 같은 메서드로 인텐트를 생성하는 경�
 별도로 Action, Category, Type을 설정한 인텐트에 Component가 설정되면 (setComponent()) 기존에 셋팅한 정보를 무시하게 된다.<br>
 
 <img src="/assets/images/Intent.JPG" width="1000" height="350">
+<a href="https://developer.android.com/guide/components/intents-filters#Types">이미지 출처</a>
 
 <br>
   1. 액티비티 A가 작업을 명시한 인텐트를 생성하여 이를 startActivity()에 전달<br>
@@ -167,14 +168,3 @@ public final String matchCategories(Set<String> categories) {
 }
 ~~~
 match() 내부의 matchCategories() 메서드
-
-
-
-
-
-
-
-
-
-
-<a href="https://developer.android.com/guide/components/intents-filters#Types">출처</a>
