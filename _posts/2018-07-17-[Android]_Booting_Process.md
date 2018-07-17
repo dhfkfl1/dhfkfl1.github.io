@@ -7,7 +7,7 @@ date:   2018-07-17 17:55:25 +0900
 <h3>안드로이드의 부팅 과정</h3>
 
 <br>
-<img src="/assets/images/booting.JPG" width="750" height="450">
+<img src="/assets/images/booting.JPG" width="950" height="650">
 <br>
 
 1. 리눅스 커널<br>
