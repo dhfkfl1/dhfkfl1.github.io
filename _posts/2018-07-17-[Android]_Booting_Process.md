@@ -30,3 +30,25 @@ Zygote는 안드로이드 애플리케이션의 로딩 시간을 단축하기 �
 6. 시스템 서버(System Server)<br>
 시스템 서버는 Zygote에서 최초로 포크되어 실행되는 안드로이드 애플리케이션 프로세스다.<br>
 시스템 서버는 애플리케이션 생명 주기를 제어하는 액티비티 매니저 서비스나 단말기의 위치 정보를 제공하는 로케이션 매니저 서비스와 같은 자바 시스템 서비스를 실행하는 역할을 한다.<br>
+
+<h3>인텐트 필터의 매칭 개선</h3>
+인텐트의 정보와 애플리케이션의 인텐트 필터 영역에 등록된 정보를 매칭하여 인텐트의 전달이 일어나는데, 이를 개선하는 방법으로 비교하는 영역을 BitSet으로 만들어 이를 비교하면 성능개선을 할 수 있는 여지가 있을 것 같다는 의견엔 멘토님도 시도할 가치가 있다고 말씀하셨다. 다만, 애플리케이션에 대한 정보는 패키지 매니저(Package Manager)가 갖고 있고 이러한 정보의 Set이 어떤 형태로 저장되어 있는지 알기위해선 Package Manager.java를 살펴보아야 할 것 같다.<br>
+
+~~~
+public ComponentName resolveActivity(@NonNull PackageManager pm) {
+    if (mComponent != null) {
+        return mComponent;
+    }
+
+    ResolveInfo info = pm.resolveActivity(
+        this, PackageManager.MATCH_DEFAULT_ONLY);
+    if (info != null) {
+        return new ComponentName(
+                info.activityInfo.applicationInfo.packageName,
+                info.activityInfo.name);
+    }
+
+    return null;
+}
+~~~
+IntentFilter.java 내에선 패키지 매니저에 대한 코드는 찾아볼 수 없었으나, 위의 코드는 Intent.java의 일부분이다. 인텐트 클래스에서는 패키지 매니저로부터 정보를 가져오는 부분이 있는 것 같다.<br>
