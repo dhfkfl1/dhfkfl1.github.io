@@ -106,7 +106,8 @@ public static abstract class IntentInfo extends IntentFilter {
 ~~~
 
 IntentFilter 클래스는 같은 경로상에 존재하지 않았고, 이전에 인텐트 필터를 다룬 <a href="https://dhfkfl1.github.io/dhfkfl1.github.io/2018/07/10/Android-_Intent_Filter.html">포스팅</a>에서의 그 IntentFilter.java가 아닐까 싶다.<br>
-가장 보고싶었던 것은 매니페스트 파일을 파싱해 intent-filter 부분을 저장하는 모습이 었는데, 지금까지 따라온 것을 되돌아보니 번지 수를 잘못 찾은 듯 하다.<br>
+가장 보고싶었던 것은 매니페스트 파일을 파싱해 intent-filter 부분을 저장하는 모습이 었는데,<br>
+지금까지 따라온 것을 되돌아보니 번지수를 잘못 찾은듯하다.<br>
 
 ~~~
 while ((type=parser.next()) != XmlPullParser.END_DOCUMENT
