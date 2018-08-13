@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[180807] IntentFilter의 성능개선 가능성"
+title: "[180807] IntentFilter의 성능개선(1)"
 date:   2018-08-07 17:55:25 +0900
 ---
 
