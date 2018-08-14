@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[180807] IntentFilter의 성능개선(2)"
+title: "[180813] IntentFilter의 성능개선(2)"
 date:   2018-08-13 17:55:25 +0900
 ---
 
@@ -105,6 +105,7 @@ public static String matchCategoryHashSet(Set<String> categories) {     //HashSe
 
 ***
 1. 원소의 개수 차이에 의한 결과
+
 조건 : 메소드의 호출 1회, mCategory와 categories의 모든 원소가 일치(최악)
 <img src="/assets/images/size_w.JPG">
 
@@ -113,6 +114,7 @@ public static String matchCategoryHashSet(Set<String> categories) {     //HashSe
 <img src="/assets/images/size_a.JPG">
 
 2. 호출 횟수 차이에 의한 결과
+
 조건 : 원소의 개수 100개, mCategory와 categories의 모든 원소가 일치(최악)
 <img src="/assets/images/call_w.JPG">
 
