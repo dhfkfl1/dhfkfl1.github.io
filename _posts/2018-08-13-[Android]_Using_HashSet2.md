@@ -111,3 +111,18 @@ public static String matchCategoryHashSet(Set<String> categories) {     //HashSe
 
 조건 : 메소드 호출 1회, mCategory와 categories의 원소가 일치하지 않음
 <img src="/assets/images/size_a.JPG">
+
+2. 호출 횟수 차이에 의한 결과
+조건 : 원소의 개수 100개, mCategory와 categories의 모든 원소가 일치(최악)
+<img src="/assets/images/call_w.JPG">
+
+조건 : 원소의 개수 100개, mCategory와 categories의 원소가 일치하지 않음
+<img src="/assets/images/call_a.JPG">
+
+***
+원소의 수가 증가할수록 ArrayList와 HashSet의 성능차이가 나타남
+HashSet이 더 우수한 성능을 보여줌
+<br>
+
+호출 횟수가 증가할수록 ArrayList와 HashSet의 성능차이가 나타남
+HashSet이 더 우수한 성능을 보여줌
