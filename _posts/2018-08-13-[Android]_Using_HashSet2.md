@@ -105,7 +105,7 @@ public static String matchCategoryHashSet(Set<String> categories) {     //HashSe
 
 ***
 
-<h3>원소의 개수 차이에 의한 결과</h3>
+<h3>원소의 개수 차이에 의한 결과</h3><br>
 
 조건 : 메소드의 호출 1회, mCategory와 categories의 모든 원소가 일치(최악)
 <img src="/assets/images/size_w.JPG">
@@ -114,7 +114,11 @@ public static String matchCategoryHashSet(Set<String> categories) {     //HashSe
 조건 : 메소드 호출 1회, mCategory와 categories의 원소가 일치하지 않음
 <img src="/assets/images/size_a.JPG">
 
-<h3>호출 횟수 차이에 의한 결과</h3>
+
+***
+
+
+<h3>호출 횟수 차이에 의한 결과</h3><br>
 
 조건 : 원소의 개수 100개, mCategory와 categories의 모든 원소가 일치(최악)
 <img src="/assets/images/call_w.JPG">
